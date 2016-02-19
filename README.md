@@ -467,6 +467,20 @@
     }
     ```
 
+  - Do not visually line up varaibles
+
+    ```javascript
+    // bad
+    var name           = 'Name';
+    var longerName     = 'Longer Name';
+    var evenLongerName = 'Even Longer Name';
+
+    // good
+    var name = 'Name';
+    var longerName = 'Longer Name';
+    var evenLongerName = 'Even Longer Name';
+    ```
+
 **[⬆ back to top](#table-of-contents)**
 
 
