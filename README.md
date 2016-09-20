@@ -1,7 +1,6 @@
-# Jam3 JavaScript Style Guide
-
-*Make It Happen and Don't Fuck It Up*
-
+# WatsonDG JavaScript Style Guide
+(Forked from Jam3 (itself forked from Airbnb's conventions))
+*In case of doubt, look at the code*
 
 ## Table of Contents
 
@@ -767,7 +766,7 @@
 
 ## Whitespace
 
-  - Use soft tabs set to 2 spaces.
+  - Use soft tabs set to 4 spaces.
 
     ```javascript
     // bad
@@ -1184,6 +1183,20 @@
       name: 'yup'
     });
     ```
+    
+  - Use kebab-case when naming folder and files
+  
+  ```
+  // bad
+  menuItem/index.js
+  lib/Math.js
+  glsl/convolutionShader.js
+
+  // good
+  menu-item/index.js
+  lib/math.js
+  glsl/convolution-shader.js
+  ```
 
   - Use a leading underscore `_` when naming private properties.
 
@@ -1224,17 +1237,9 @@
     var hasEggs = true;
     ```
 
-  - When saving a reference to `this` use `_this`.
+  - When saving a reference to `this` use `self`.
 
     ```javascript
-    // bad
-    function() {
-      var self = this;
-      return function() {
-        console.log(self);
-      };
-    }
-
     // bad
     function() {
       var that = this;
@@ -1245,9 +1250,9 @@
 
     // good
     function() {
-      var _this = this;
+      var self = this;
       return function() {
-        console.log(_this);
+        console.log(self);
       };
     }
     ```
@@ -1479,18 +1484,6 @@
     doSomething();
     ```
   - Resuable modules should be distributed on NPM
-
-**[⬆ back to top](#table-of-contents)**
-
-
-## jQuery
-
-  - You should shy away from using jQuery. Instead use modules off NPM like:
-    + `dom-select`
-    + `dom-style`
-    + `dom-tree`
-    + `dom-event`
-  - Visit [https://github.com/npm-dom](https://github.com/npm-dom) for more info.
 
 **[⬆ back to top](#table-of-contents)**
 
