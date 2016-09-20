@@ -1,6 +1,7 @@
 # WatsonDG JavaScript Style Guide
-(Forked from Jam3 (itself forked from Airbnb's conventions))
-*In case of doubt, look at the code*
+`(Forked from Jam3 (itself forked from Airbnb's conventions))`
+
+### *When in doubt, read the source code.*
 
 ## Table of Contents
 
